@@ -19,3 +19,9 @@ for x in range(0, pass_length):
             nr_letters -= 1
         else:
             x -= 1
+    elif char_choice == 2:
+        if nr_symbols > 0:
+            password += symbols[random.randint(0, 8)]
+            nr_symbols -= 1
+        else:
+            x -= 1

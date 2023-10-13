@@ -8,3 +8,14 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+pass_length = nr_letters + nr_symbols + nr_numbers
+password = ""
+
+for x in range(0, pass_length):
+    char_choice = random.randint(1, 3) # Chooses a number from 1 to 3. Based on that number, a letter, symbol, or number is added respectively
+    if char_choice == 1:
+        if nr_letters > 0:
+            password += letters[random.randint(0, 51)]
+            nr_letters -= 1
+        else:
+            x -= 1

@@ -25,3 +25,9 @@ for x in range(0, pass_length):
             nr_symbols -= 1
         else:
             x -= 1
+    else:
+        if nr_numbers > 0:
+            password += numbers[random.randint(0, 9)]
+            nr_numbers -= 1
+        else:
+            x -= 1
